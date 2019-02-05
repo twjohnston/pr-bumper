@@ -404,6 +404,7 @@ describe('Bumper', function () {
       sandbox.stub(bumper.ci, 'getLastCommitMsg')
       sandbox.stub(bumper, '_getMergedPrInfo').returns(Promise.resolve(info))
       sandbox.stub(bumper, '_maybeBumpVersion').returns(Promise.resolve(info))
+      sandbox.stub(bumper, '_maybeBumpManifest').returns(Promise.resolve(info))
       sandbox.stub(bumper, '_maybePrependChangelog').returns(Promise.resolve(info))
       sandbox.stub(bumper, '_maybeGenerateDependencySnapshot').returns(Promise.resolve(info))
       sandbox.stub(bumper, '_maybeCommitChanges').returns(Promise.resolve(info))
